@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/_FirstScene/Loading_Screen.unity
+    guid: 974ebbb26862d204289ec10a299114a8
+  - enabled: 1
+    path: Assets/Scenes/Character_Screen.unity
+    guid: 4f5f4df790a94db43a85c7ef0a2e4a33
+  - enabled: 1
+    path: Assets/Scenes/Collection_Screen.unity
+    guid: 885d2c4bdd42da0489fca4757fc8a932
+  - enabled: 1
+    path: Assets/Scenes/Main_Menu.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Pulled_Screen.unity
+    guid: f12c58e87e7ab774fbbca3620ffb0238
+  - enabled: 1
+    path: Assets/Scenes/Battle_Screen.unity
+    guid: 82c5c84728dbe744ab1acdbfa2fb4020
+  - enabled: 1
+    path: Assets/Scenes/Team_Screen.unity
+    guid: bce5d8e7206bde845843f2361613d9eb
+  - enabled: 1
+    path: Assets/Scenes/Victory_Screen.unity
+    guid: 5a1872f869234284fa5b64faa9ed0820
+  m_configObjects: {}
