@@ -56,6 +56,7 @@ public class LoadAvailableTeamMembers : MonoBehaviour
         int xPos = 75;
         int yPos = -75;
         int xOffset = 125;
+        int counter = 0;
 
         //get prefab parent
         GameObject parent = GameObject.Find("Choosing_Panel");
@@ -73,6 +74,13 @@ public class LoadAvailableTeamMembers : MonoBehaviour
 
         foreach (CharacterObject character in ownedCharacter)
         {
+            if (counter > 8)
+            {
+                yPos = yPos - xOffset;
+                xPos = 75;
+                counter = 0;
+            }
+
             //Make a sprite out of current character
             memberSprite = character.sprite;
 
@@ -100,6 +108,7 @@ public class LoadAvailableTeamMembers : MonoBehaviour
 
             memberScript = member.GetComponent<ChooseTeamMember>();
             memberScript.character = character;
+            counter++;
         }
 
         return prefabs;

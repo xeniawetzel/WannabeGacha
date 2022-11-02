@@ -17,6 +17,9 @@ public class DrawCollectionScreen : MonoBehaviour
 
         //initiate first characters x position
         int newXPos = 90;
+        int newYPos = -90;
+        int counter = 0;
+        int offset = 125;
         Sprite currentCharacterSprite;
         GameObject characterPanel;
         Image characterImage;
@@ -25,6 +28,12 @@ public class DrawCollectionScreen : MonoBehaviour
 
         foreach (CharacterObject character in ownedCharacters)
         {
+            if (counter > 8)
+            {
+                newXPos = 90;
+                newYPos = newYPos - offset;
+                counter = 0;
+            }
             //Make a sprite out of current character
             currentCharacterSprite = character.sprite;
 
@@ -37,8 +46,9 @@ public class DrawCollectionScreen : MonoBehaviour
 
             //Set the correct position of each prefab
             imageTransform = characterPanel.GetComponent<RectTransform>();
-            imageTransform.anchoredPosition = new Vector2(newXPos,-90);
-            newXPos += 125;
+            imageTransform.anchoredPosition = new Vector2(newXPos, newYPos);
+            newXPos += offset;
+            counter++;
         }
     }
     
