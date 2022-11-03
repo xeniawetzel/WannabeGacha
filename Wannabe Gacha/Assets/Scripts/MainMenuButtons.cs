@@ -42,7 +42,14 @@ public class MainMenuButtons : MonoBehaviour
 
 	void BattleTaskOnClick()
 	{
-		SceneManager.LoadScene("Battle_Screen");
+		if(Initialize.instance.teamOne.team["member3"] == null)
+        {
+			SceneManager.LoadScene("Team_Screen");
+		} else
+		{
+			SceneManager.LoadScene("Loading_Battle_Screen");
+		}
+		
 	}
 
 	void TeamTaskOnClick()

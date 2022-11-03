@@ -50,16 +50,17 @@ public class BattleScreenManager : MonoBehaviour
 
         battlescreen.Initilize();
         battlescreen.DrawScene();
-        
+
         speedDic = team.Union(enemyObjects).ToDictionary(k => k.Key, v => v.Value);
 
         ConstructSpeedList();
-        foreach (var item in speedList) {
+        foreach (var item in speedList)
+        {
             Debug.Log(item.Item1);
             Debug.Log(item.Item2);
         }
 
-        Debug.Log("Initilize done.");
+        Debug.Log("Initilize done.");       
     } 
 
     private void Update()
@@ -81,7 +82,7 @@ public class BattleScreenManager : MonoBehaviour
             SceneManager.LoadScene("Victory_Screen");
         }
 
-        counter = (counter + 1) % 6;
+        counter = (counter + 1) % 6;    
     }
 
     /// <summary>
